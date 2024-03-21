@@ -802,7 +802,7 @@ export const FileActions: Actions<Params> = {
           },
         ).spawn();
 
-        proc.status.then(async (s) => {
+        await proc.status.then(async (s) => {
           if (s.success) {
             return;
           }
